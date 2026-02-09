@@ -27,7 +27,6 @@ function removeFather() {
 }
 
 const authorsList = document.querySelectorAll(".blog-post > h2 + p > a")
-console.log(authorsList)
 authorsList.forEach(author => {
     author.addEventListener('mouseover', ()=>{
         authorAlert(author.textContent)
