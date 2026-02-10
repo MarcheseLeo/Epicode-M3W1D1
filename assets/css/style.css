@@ -84,6 +84,6 @@ footer>p>a:last-child {
     color: chocolate;
 }
 
-body >div:first-of-type > .row  a {
+/* body >div:first-of-type > .row  a {
     background-color: lightpink;
-}
+} */

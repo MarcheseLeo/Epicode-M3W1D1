@@ -16,7 +16,6 @@ function removeTwitterLink() {
 
 // EXTRA Crea con JavaScript la funzionalità per rimuovere il corrispondente elemento padre dal DOM cliccando sul link "Continua a leggere".
 const linkList = document.querySelectorAll('body >div:first-of-type > .row  a')
-console.log(linkList)
 linkList.forEach(link =>{
     link.addEventListener('click', ()=>{
         removeFather(link)
