@@ -15,11 +15,14 @@ function removeTwitterLink() {
 }
 
 // EXTRA Crea con JavaScript la funzionalità per rimuovere il corrispondente elemento padre dal DOM cliccando sul link "Continua a leggere".
-const linkList = document.querySelectorAll('body >div:first-of-type > .row  a')
-linkList.forEach(link =>{
-    link.addEventListener('click', ()=>{
-        removeGrandFather(link)
-    })
+const linkList = document.querySelectorAll('body > div a')
+console.log(linkList)
+linkList.forEach(link => {
+    if (link.textContent.includes("Continua a leggere")) {
+        link.addEventListener('click', () => {
+            removeGrandFather(link)
+        })
+    }
 })
 
 function removeGrandFather(link) {
@@ -29,7 +32,7 @@ function removeGrandFather(link) {
 // EXTRA Crea con JavaScript la funzionalità per creare un alert col nome dell'autore ogni volta che il cursore passa sopra l'autore del post.
 const authorsList = document.querySelectorAll(".blog-post > h2 + p > a")
 authorsList.forEach(author => {
-    author.addEventListener('mouseover', ()=>{
+    author.addEventListener('mouseover', () => {
         authorAlert(author.textContent)
     })
 })
