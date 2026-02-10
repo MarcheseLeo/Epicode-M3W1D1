@@ -18,11 +18,11 @@ function removeTwitterLink() {
 const linkList = document.querySelectorAll('body >div:first-of-type > .row  a')
 linkList.forEach(link =>{
     link.addEventListener('click', ()=>{
-        removeFather(link)
+        removeGrandFather(link)
     })
 })
 
-function removeFather(link) {
+function removeGrandFather(link) {
     link.parentElement.parentElement.remove()
 }
 
